@@ -8,33 +8,46 @@
 </head>
 <body>
 <div class="content">
-    <form>
-        <input type="text" id="output">
+    <form id="calculator-form">
+        <input type="text" id="output" aria-label="Calculator display" placeholder="0" readonly>
     </form>
-<div class="buttons">
-    <button id="btn-clear">c</button>
-    <button class="btn btn-sign">(</button>
-    <button class="btn btn-sign">)</button>
-    <button class="btn btn-sign">/</button>
-    <button class="btn btn-num">1</button>
-    <button class="btn btn-num">2</button>
-    <button class="btn btn-num">3</button>
-    <button class="btn btn-sign">*</button>
-    <button class="btn btn-num">4</button>
-    <button class="btn btn-num">5</button>
-    <button class="btn btn-num">6</button>
-    <button class="btn btn-sign">-</button>
-    <button class="btn btn-num">7</button>
-    <button class="btn btn-num">8</button>
-    <button class="btn btn-num">9</button>
-    <button class="btn btn-sign">+</button>
-    <button class="btn btn-sign">%</button>
-    <button class="btn btn-num">0</button>
-    <button class="btn btn-sign">.</button>
-    <button id="btn-equal">=</button>
-
-
-</div>
+    <div class="mode-row">
+        <button id="angle-mode" type="button" aria-label="Angle mode: degrees" aria-pressed="true">DEG</button>
+    </div>
+    <div class="science-buttons">
+        <button class="btn btn-science" type="button" data-action="function" data-value="sin">sin</button>
+        <button class="btn btn-science" type="button" data-action="function" data-value="cos">cos</button>
+        <button class="btn btn-science" type="button" data-action="function" data-value="tan">tan</button>
+        <button class="btn btn-science" type="button" data-action="function" data-value="sqrt">√</button>
+        <button class="btn btn-science" type="button" data-action="square">x²</button>
+        <button class="btn btn-science" type="button" data-action="reciprocal">1/x</button>
+        <button class="btn btn-science" type="button" data-action="constant" data-value="π">π</button>
+        <button class="btn btn-science" type="button" data-action="value" data-value="^">xʸ</button>
+        <button class="btn btn-science" type="button" data-action="function" data-value="ln">ln</button>
+        <button class="btn btn-science" type="button" data-action="value" data-value="/">÷</button>
+    </div>
+    <div class="buttons">
+        <button id="btn-clear" type="button" aria-label="Clear">c</button>
+        <button id="btn-delete" type="button" aria-label="Delete last character">DEL</button>
+        <button class="btn btn-sign" type="button" data-value="(">(</button>
+        <button class="btn btn-sign" type="button" data-value=")">)</button>
+        <button class="btn btn-num" type="button" data-value="7">7</button>
+        <button class="btn btn-num" type="button" data-value="8">8</button>
+        <button class="btn btn-num" type="button" data-value="9">9</button>
+        <button class="btn btn-sign" type="button" data-value="*">×</button>
+        <button class="btn btn-num" type="button" data-value="4">4</button>
+        <button class="btn btn-num" type="button" data-value="5">5</button>
+        <button class="btn btn-num" type="button" data-value="6">6</button>
+        <button class="btn btn-sign" type="button" data-value="-">−</button>
+        <button class="btn btn-num" type="button" data-value="1">1</button>
+        <button class="btn btn-num" type="button" data-value="2">2</button>
+        <button class="btn btn-num" type="button" data-value="3">3</button>
+        <button class="btn btn-sign" type="button" data-value="+">+</button>
+        <button class="btn btn-sign" type="button" data-value="%">%</button>
+        <button class="btn btn-num" type="button" data-value="0">0</button>
+        <button class="btn btn-sign" type="button" data-value=".">.</button>
+        <button id="btn-equal" type="button">=</button>
+    </div>
 </div>
 
    <script src="script.js"></script> 

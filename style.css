@@ -5,10 +5,11 @@
 }
 body {
     background-color: #2e2e2e;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 16px 0;
 }
 
 .content {
@@ -37,28 +38,55 @@ border:none;
 padding-right: 20px;
 }
 
+.mode-row {
+    display: flex;
+    justify-content: flex-end;
+    margin: -4px 0 12px;
+}
+
+#angle-mode {
+    width: auto;
+    aspect-ratio: auto;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: #3cb371;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.science-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
 .buttons {
-    display:flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
 }
 
 button {
-    width: 70px;
-    height: 70px;
+    width: 100%;
+    aspect-ratio: 1;
     font-size: 2rem;
     border: 1px solid rgba(0, 0, 0, .1);
     cursor: pointer;
     border-radius: 50%;
-    margin-top: 10px;
     transition: all ease-in-out .2s;
     background-color: #fff;
 }
 
-.btn:active {
+.btn:active, button:active {
     background-color: #d5d5d5;
     font-size: 24px;
+}
+
+#btn-delete {
+    color: #3cb371;
+    font-size: 1rem;
 }
 
 #btn-clear {
@@ -69,7 +97,29 @@ button {
     color: #3cb371;
 }
 
+.btn-science {
+    color: #3cb371;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 #btn-equal {
     background-color: #3cb371;
     color: #fff;
+}
+
+button:focus-visible {
+    outline: 3px solid #2e2e2e;
+    outline-offset: 2px;
+}
+
+@media (max-width: 400px) {
+    .content {
+        width: min(350px, calc(100vw - 24px));
+        padding: 1.25rem;
+    }
+
+    .btn-science {
+        font-size: 0.9rem;
+    }
 }
